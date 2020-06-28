@@ -50,7 +50,7 @@ class DS3231:
         REG_CTRL = self.getReg(DS3231_REG_CTRL)
         REG_CTRL = REG_CTRL & 0b00000111    # zero unwanted bits
         REG_CTRL = REG_CTRL | 0b00000100    # set INTCN
-        print(REG_CTRL)
+
         self.setReg(DS3231_REG_CTRL,REG_CTRL)
         # set to 24h mode - 12h not supported
         A109 = self.getReg(DS3231_REG_A1HOUR)
